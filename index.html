@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Isadora Francisca</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- ======= HEADER ======= -->
+  <header class="header">
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home" class="active">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href= #skills>Habilidades</a>
+      <a href="#projects">Projetos</a>
+      <a href="#contact">Contatos</a>
+    </nav>
+  </header>
+  <!-- ======= HOME ======= -->
+  <section class="home" id="home">
+    <div class="home-img">
+      <img src="/assets/img/img.home.png" alt="Foto de Isadora">
+    </div>
+    <div class="home-content">
+      <h1>Olá, eu sou</h1>
+      <span>Isadora Francisca</span>
+      <h3 class="typing-text">Sou <span></span></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer 
+         tellus est, finibus ut congue sed, faucibus ut dui. 
+         Sed congue nisl dolor, id dapibus leo elementum posuere.</p>
+      <div class="social-icon">
+        <a href="https://www.linkedin.com/notifications/?filter=all"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/IsadoraFrancis"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/isa_dorafrancis/"><i class="fa-brands fa-square-instagram"></i></a>
+      </div>
+      <a href="/assets/img/cv- Isadora Silva.pdf" class="btn">Baixar CV</a>
+    </div>
+  </section>
+  <!-- ======= SOBRE MIM ======= -->
+  <section class="sobre-mim" id="sobre">
+    <div class="container">
+      <div class="header-text">
+        <h2 class="section-heading">Sobre mim</h2>
+      </div>
+      <div class="sobre-mim-content">
+        <h2 class="sobre-text">
+          Sou <span>Isadora Francisca</span>, <span>desenvolvedora full stack</span> de Recife (PE), 
+          com 23 anos e estudante de Análise e Desenvolvimento de Sistemas pelo Embarque Digital. 
+          Gosto de atuar em diferentes camadas da tecnologia — do front-end ao back-end — 
+          e estou sempre em busca de aprender, criar e resolver problemas com código.
+        </h2>
+      </div>
+      <div class="card">
+        <div class="card-xp">
+          <i class="fa-solid fa-award"></i>
+          <h1>Experiência</h1>
+          <h2>1+ ano</h2>
+          <p>Projetos acadêmicos e competições</p>
+        </div>
+        <div class="card-educ">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h1>Formação</h1>
+          <h2>SENAC</h2>
+          <p>Análise e Desenvolvimento de Sistemas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======= HABILIDADES ======= -->
+  <section class="skills-section" id="skills">
+   <div class="header-text">
+        <h2 class="section-heading">Habilidades</h2>
+      </div>
+    <div class="skills-category">
+      <span><i class="fa-solid fa-check"></i> TypeScript</span>
+      <span><i class="fa-solid fa-check"></i> JavaScript</span>
+      <span><i class="fa-solid fa-check"></i> Css</span>
+      <span><i class="fa-solid fa-check"></i> React</span>
+      <span><i class="fa-solid fa-check"></i> HTML</span>
+    </div>
+    <div class="divider"></div>
+    <div class="skills-category">
+      <span><i class="fa-solid fa-check"></i> Node</span>
+      <span><i class="fa-solid fa-check"></i> Postman</span>
+      <span><i class="fa-solid fa-check"></i> Python</span>
+      <span><i class="fa-solid fa-check"></i> Django</span>
+      <span><i class="fa-solid fa-check"></i> MySQL</span>
+      <span><i class="fa-solid fa-check"></i> MongoDB</span>
+    </div>
+    <div class="divider"></div>
+
+    <div class="skills-category">
+      <span><i class="fa-solid fa-check"></i> GIT</span>
+      <span><i class="fa-solid fa-check"></i> GitHub</span>
+      <span><i class="fa-solid fa-check"></i> Salesforce</span>
+      <span><i class="fa-solid fa-check"></i> Figma</span>
+    </div>
+</section>
+<!-- ======= PROJETOS ======= -->
+<section class="project" id="projects">
+  <div class="header-text">
+    <h2 class="section-heading">Projetos</h2>
+  </div>
+  <div class="filters">
+    <button class="active" data-filter="all">Design</button>
+    <button data-filter="frontend">Front-End</button>
+    <button data-filter="backend">Back-End</button>
+  </div>
+    <div class="card-project">
+      <div class="project-card" data-cat="design">
+        <div class="img-wrap">
+          <img src="/assets/img/enersi.png" alt="Enersi">
+        </div>
+        <div class="content">
+          <h3>Enersi</h3>
+          <p>Projeto com o propósito de conectar pessoas que desejam utilizar energia limpa a empresas parceiras que oferecem os seus serviços a preços acessíveis.</p>
+          <div class="actions">
+            <button class="btn" onclick="window.location.href=decodeURIComponent('https%3A%2F%2Fwww.figma.com%2Fproto%2Fcs5qXx8dpzrwS9h8DbBcBz%2FUntitled%3Fnode-id%3D2-75%26p%3Df%26t%3Dt4M7lfAQyG7Nvd8z-0%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D2%253A65');">
+              Ver Mais
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-cat="design">
+        <div class="img-wrap">
+          <img src="/assets/img/salão senca.png" alt="Salão Senac">
+        </div>
+        <div class="content">
+          <h3>Salão Senac</h3>
+          <p>Plataforma para o salão de beleza do SENAC que integra agendamento online, registro detalhado de serviços, previsão de retorno e feedback dos clientes.</p>
+          <div class="actions">
+            <button class="btn" onclick="window.location.href = decodeURIComponent('https%3A%2F%2Fwww.figma.com%2Fdesign%2FcxFdWvWcRKpSW6kKAsIazH%2FUntitled%3Fnode-id%3D0-1%26p%3Df%26t%3D6AQhviWDrIgTGUVi-0');">
+              Ver Mais
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-cat="design">
+        <div class="img-wrap">
+          <img src="/assets/img/recifencia.png" alt="Recifência">
+        </div>
+        <div class="content">
+          <h3>Recifência</h3>
+          <p>Plataforma com o propósito de impulsionar a arte local, oferecendo visibilidade aos artistas e conectando-os a possíveis contratantes, seja para eventos, shows etc.</p>
+          <div class="actions">
+            <button class="btn" onclick="window.location.href = decodeURIComponent('https%3A%2F%2Fwww.figma.com%2Fproto%2FFj6KUqp9yevh7zpptNmxbf%2FUntitled%3Fnode-id%3D116-2%26p%3Df%26t%3DP25MKdFODkksIkft-0%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D116%253A2%26show-proto-sidebar%3D1');">
+              Ver Mais
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- ======= CONTATOS ======= -->
+  <section id="contact">
+    <div class="header-text">
+    <h2 class="section-heading">Contatos</h2>
+  </div>
+  <div class="contato-container">
+      <a href="mailto:isadora.nizi@gmail.com" class="contato-item">
+        <i class="fas fa-envelope"></i>
+        <span>isadora.nizi@gmail.com</span>
+      </a>
+  </section>
+<!-- ======= fOOTER======= -->
+  <footer class="footer">
+    <p>
+      © 2025 Isadora Francisca
+      <br>
+      Todos os direitos reservados.
+    </p>
+  </footer>
+<script src="/assets/js/script.js"></script>
+</body>
+</html>

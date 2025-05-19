@@ -1,0 +1,304 @@
+/* ======== BASE ======== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --bg-color: #f7f5f2;
+  --second-bg-color: #161616;
+  --text-color: #211d1d;
+  --main-color: #0624bb;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+}
+
+/* ======== HEADER ======== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  gap: 4rem;
+}
+
+.navbar a {
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--text-color);
+  border-bottom: 3px solid var(--text-color);
+}
+
+#menu-icon {
+  font-size: 3rem;
+  color: var(--bg-color);
+  display: none;
+  cursor: pointer;
+}
+
+/* ======== RESPONSIVE HEADER ======== */
+@media (max-width: 995px) {
+  header {
+    padding: 1.5rem 5%;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 70%;
+    background-color: var(--second-bg-color);
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    padding: 2rem;
+    border-radius: 0 0 0 1rem;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar a {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ======== HOME ======== */
+section {
+  min-height: 100vh;
+  padding: 5rem 9%;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  color: var(--text-color);
+}
+
+.home-content p {
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+span {
+  color: var(--main-color);
+  font-weight: 700;
+}
+
+.home-img img {
+  width: 30vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px var(--main-color);
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  border-radius: 4rem;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  background: transparent;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 15px var(--main-color);
+}
+
+/* ======== TYPING TEXT ======== */
+.typing-text span {
+  font-size: 2rem;
+  position: relative;
+}
+
+.typing-text span::before {
+  content: 'Desenvolvedora Full-Stack';
+  color: var(--main-color);
+  animation: words 20s infinite;
+}
+
+.typing-text span::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  border-left: 2px solid var(--main-color);
+  right: 0;
+  animation: cursor 0.6s infinite, typing 20s steps(30) infinite;
+}
+
+@keyframes words {
+  0%, 50% {
+    content: 'Desenvolvedora Full-Stack';
+  }
+  51%, 100% {
+    content: 'UX/UI Designer';
+  }
+}
+
+@keyframes cursor {
+  0%, 100% {
+    border-left-color: var(--main-color);
+  }
+  50% {
+    border-left-color: transparent;
+  }
+}
+
+@keyframes typing {
+  0%, 10%, 100% {
+    width: 0;
+  }
+  40%, 90% {
+    width: 100%;
+  }
+}
+
+/* ======== PROJECTS ======== */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 4rem 0 2rem;
+}
+
+.filters button {
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: var(--bg-color);
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filters button:hover,
+.filters button.active {
+  background: var(--main-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 10px var(--main-color);
+}
+
+.card-project {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  display: none;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card .img-wrap img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.project-card .content {
+  padding: 20px;
+  border-top: 2px solid var(--main-color);
+}
+
+.project-card h3 {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.project-card p {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.project-card .actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--main-color);
+  font-size: 1.4rem;
+}
